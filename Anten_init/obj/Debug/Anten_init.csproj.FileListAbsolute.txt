@@ -1,0 +1,75 @@
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\Anten_init.exe.config
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\Anten_init.exe
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\Anten_init.pdb
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\ExcelDataReader.dll
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\ExcelDataReader.pdb
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\ExcelDataReader.xml
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\obj\Debug\Anten_init.Form1.resources
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\obj\Debug\Anten_init.Properties.Resources.resources
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\obj\Debug\Anten_init.csproj.GenerateResource.Cache
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\obj\Debug\Anten_init.exe
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\obj\Debug\Anten_init.pdb
+C:\Users\m2\Desktop\Anten_Cs\Anten_init\Anten_init\obj\Debug\Anten_init.csprojResolveAssemblyReference.cache
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\Anten_init.exe.config
+F:\MoorIII\Software\Others\Anten_init\Anten_init\obj\Debug\Anten_init.exe
+F:\MoorIII\Software\Others\Anten_init\Anten_init\obj\Debug\Anten_init.pdb
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\Anten_init.exe
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\Anten_init.pdb
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.dll
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\ExcelDataReader.dll
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\ExcelDataReader.pdb
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\ExcelDataReader.xml
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.pdb
+F:\MoorIII\Software\Others\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.xml
+F:\MoorIII\Software\Others\Anten_init\Anten_init\obj\Debug\Anten_init.csprojResolveAssemblyReference.cache
+F:\MoorIII\Software\Others\Anten_init\Anten_init\obj\Debug\Anten_init.Form1.resources
+F:\MoorIII\Software\Others\Anten_init\Anten_init\obj\Debug\Anten_init.Properties.Resources.resources
+F:\MoorIII\Software\Others\Anten_init\Anten_init\obj\Debug\Anten_init.csproj.GenerateResource.Cache
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.exe.config
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.exe
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.pdb
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.dll
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.pdb
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.xml
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.csprojResolveAssemblyReference.cache
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.Form1.resources
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.Properties.Resources.resources
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.csproj.GenerateResource.Cache
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.exe
+C:\Users\MORIII\Desktop\Moor_3\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.pdb
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.exe.config
+H:\_MOOR III\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.exe
+H:\_MOOR III\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.pdb
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.exe
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.pdb
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.dll
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.dll
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.pdb
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.xml
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.pdb
+H:\_MOOR III\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.xml
+H:\_MOOR III\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.csprojResolveAssemblyReference.cache
+H:\_MOOR III\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.Form1.resources
+H:\_MOOR III\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.Properties.Resources.resources
+H:\_MOOR III\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.csproj.GenerateResource.Cache
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.exe.config
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.exe
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.pdb
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.exe
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\Anten_init.pdb
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.dll
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.pdb
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.xml
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.csprojResolveAssemblyReference.cache
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.Form1.resources
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.Properties.Resources.resources
+C:\Ali Seyedmomeni\Software\Moor\Antenna\Anten_init\Anten_init\obj\Debug\Anten_init.csproj.GenerateResource.Cache
