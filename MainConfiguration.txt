@@ -1,0 +1,153 @@
+
+/interface bridge
+add admin-mac=[Eth MAC] auto-mac=no name=bridge1
+
+/interface wireless
+set [ find default-name=wlan1 ] adaptive-noise-immunity=ap-and-client-mode band=5ghz-onlyn basic-rates-a/g="" \
+    channel-width=20/40mhz-eC \
+    disabled=no distance=1 frequency=[Frequency] guard-interval=long hide-ssid=yes \
+    ht-basic-mcs=mcs-4,mcs-10 ht-supported-mcs=\
+    mcs-4,mcs-10 hw-protection-mode=rts-cts max-station-count=4 mode=ap-bridge preamble-mode=\
+    long radio-name=[Sys Name] rate-set=configured scan-list=[Frequency] ssid=Qur \
+    supported-rates-a/g="" update-stats-interval=10s wds-default-bridge=bridge1 wds-mode=static \
+    wireless-protocol=802.11 wps-mode=disabled
+
+/interface wireless wds
+add disabled=no master-interface=wlan1 name=wds1 wds-address=\
+    [if R(n) is an odd number, input Wlan MAC of R(n+1), Else, input Wlan MAC of R(n-1)]
+
+/interface wireless security-profiles
+set [ find default=yes ] authentication-types=wpa2-psk eap-methods="" mode=\
+    dynamic-keys supplicant-identity=MikroTik wpa2-pre-shared-key=\
+    "myrmecia"
+
+/system logging action
+set 3 remote=10.1.1.149 remote-port=51412
+
+#/ip neighbor discovery-settings
+#set discover-interface-list=none
+
+# MAC addresses of wireless connected radio (WDS paired) AND MAC address of the Rear radio [B8:69:F4:9B:FB:BB] and MAC address of the Front radio [B8:69:F4:9B:F7:AB]
+/interface wireless access-list
+add authentication=no forwarding=no interface=all mac-address=\
+    FF:FF:FF:FF:FF:FF vlan-mode=no-tag
+# This line is dedicated to MAC address of  the paired radios. (for the Rear or Front radios, this line contain MAC addresse of Devices with odd or even number)
+add authentication=no forwarding=no interface=wlan1 signal-range=-120..-71 \
+    vlan-mode=no-tag
+add interface=wlan1 mac-address=[if R(n) is an odd number, input Wlan MAC of R(n+1), Else, input Wlan MAC of R(n-1)] signal-range=-70..120\
+    vlan-mode=no-tag
+add authentication=no forwarding=no interface=wlan1 signal-range=-120..-66 \
+    vlan-mode=no-tag
+add interface=wlan1 mac-address=B8:69:F4:9B:F7:AB signal-range=-65..120 \
+    vlan-mode=no-tag
+add interface=wlan1 mac-address=B8:69:F4:9B:FB:BB signal-range=-65..120 \
+    vlan-mode=no-tag
+
+# MAC addresses of wireless connected radio (WDS paired) AND MAC adress of the Rear radio [B8:69:F4:9B:FB:BB] and MAC address of the Front radio [B8:69:F4:9B:F7:AB]
+/interface wireless connect-list
+# This line is dedicated to MAC address of  the paired radios.
+add connect=no interface=wlan1 security-profile=default signal-range=\
+    -120..-71
+add interface=wlan1 mac-address=[if R(n) is an odd number, input Wlan MAC of R(n+1), Else, input Wlan MAC of R(n-1)] security-profile=default \
+    signal-range=-70..120 ssid=Qur wireless-protocol=802.11
+add connect=no interface=wlan1 security-profile=default signal-range=\
+    -120..-66
+add interface=wlan1 mac-address=B8:69:F4:9B:F7:AB security-profile=default \
+    signal-range=-65..120 ssid=Qur wireless-protocol=802.11
+add interface=wlan1 mac-address=B8:69:F4:9B:FB:BB security-profile=default \
+    signal-range=-65..120 ssid=Qur wireless-protocol=802.11
+
+/ip address
+add address=[ip address of R(n)]/24 interface=bridge1 network=10.1.1.0
+
+/ip service
+set telnet disabled=yes
+set ftp disabled=yes
+set www disabled=yes
+set ssh disabled=yes
+set api disabled=yes
+set winbox address=10.1.1.149/32 port=54321
+set api-ssl disabled=yes
+
+/system clock
+set time-zone-name=Asia/Tehran
+
+/system identity
+set name=[Sys Name of R(n)]
+
+/system logging
+set 0 action=remote prefix=[Sys Name of R(n)]
+set 1 action=remote prefix=[Sys Name of R(n)]
+set 2 action=remote prefix=[Sys Name of R(n)]
+add action=remote prefix=[Sys Name of R(n)] topics=critical
+add action=remote prefix=[Sys Name of R(n)] topics=system
+add action=remote prefix=[Sys Name of R(n)] topics=dude
+add action=remote prefix=[Sys Name of R(n)] topics=event
+add action=remote prefix=[Sys Name of R(n)] topics=interface
+add action=remote prefix=[Sys Name of R(n)] topics=manager
+add action=remote prefix=[Sys Name of R(n)] topics=ntp
+add action=remote prefix=[Sys Name of R(n)] topics=script
+add action=remote prefix=[Sys Name of R(n)] topics=snmp
+add action=remote prefix=[Sys Name of R(n)] topics=timer
+add action=remote prefix=[Sys Name of R(n)] topics=watchdog
+add action=remote prefix=[Sys Name of R(n)] topics=wireless
+add action=remote prefix=[Sys Name of R(n)] topics=write
+
+/system ntp client
+set enabled=yes primary-ntp=10.1.1.149
+
+/user add name=farand password=myrmecia group=full address=10.1.1.149
+/user remove admin
+
+# Block Port Scanner
+
+/ip firewall filter
+add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="Port scanners to list " disabled=no
+
+add chain=input protocol=tcp tcp-flags=fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="NMAP FIN Stealth scan"
+
+add chain=input protocol=tcp tcp-flags=fin,syn action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="SYN/FIN scan"
+
+add chain=input protocol=tcp tcp-flags=syn,rst action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="SYN/RST scan"
+
+add chain=input protocol=tcp tcp-flags=fin,psh,urg,!syn,!rst,!ack action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="FIN/PSH/URG scan"
+
+add chain=input protocol=tcp tcp-flags=fin,syn,rst,psh,ack,urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="ALL/ALL scan"
+
+add chain=input protocol=tcp tcp-flags=!fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="NMAP NULL scan"
+
+add chain=input src-address-list="port scanners" action=drop comment="dropping port scanners" disabled=no
+
+#DNS cache
+/ip dns set allow-remote-requests=no
+
+# Enable These Comman-Line MUST Apply After Installation!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# IP Address of wireless connected radio (for robot radios it's workstation's IP)
+#/system watchdog
+#set watch-address=[if R(n) is an odd number, input ip address of R(n-1), Else, input ip address of R(n+1), For R(1) input IP Address of Workstation]
+
+# Disable Bandwith-Server Port And Bandwith Test
+#/tool bandwidth-server set enabled=no
+
+#Block Pinging
+#/ip firewall filter
+#add action=reject chain=input protocol=icmp reject-with=icmp-network-unreachable
+
+#MAC Access
+#/tool mac-server
+#set allowed-interface-list=none
+#/tool mac-server mac-winbox
+#set allowed-interface-list=none
+#/tool mac-server ping
+#set enabled=no
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#IPv4 firewall to a router
+/ip firewall address-list
+add address=10.1.1.1-10.1.1.200 list=allowed_to_router
+
+/interface bridge port
+add bridge=bridge1 interface=wlan1
+add bridge=bridge1 interface=ether1
